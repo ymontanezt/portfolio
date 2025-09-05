@@ -1,31 +1,31 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ArrowLeft, Calendar, MapPin, Award, GraduationCap, Briefcase } from 'lucide-react'
-import Link from 'next/link'
-import { useI18n } from '@/contexts/I18nContext'
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useI18n } from "@/contexts/I18nContext";
+import { motion } from "framer-motion";
+import { ArrowLeft, Award, Briefcase, GraduationCap } from "lucide-react";
+import Link from "next/link";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-}
+  visible: { opacity: 1, y: 0 },
+};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 export default function SobreMiPage() {
-  const { translation, language } = useI18n()
-  
+  const { translation, language } = useI18n();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Header */}
@@ -82,10 +82,18 @@ export default function SobreMiPage() {
                   {translation.aboutMe.professionalSummary.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="text-sm">{translation.aboutMe.professionalSummary.badges.fullStack}</Badge>
-                  <Badge variant="secondary" className="text-sm">{translation.aboutMe.professionalSummary.badges.mobile}</Badge>
-                  <Badge variant="secondary" className="text-sm">{translation.aboutMe.professionalSummary.badges.agile}</Badge>
-                  <Badge variant="secondary" className="text-sm">{translation.aboutMe.professionalSummary.badges.cloud}</Badge>
+                  <Badge variant="secondary" className="text-sm">
+                    {translation.aboutMe.professionalSummary.badges.fullStack}
+                  </Badge>
+                  <Badge variant="secondary" className="text-sm">
+                    {translation.aboutMe.professionalSummary.badges.mobile}
+                  </Badge>
+                  <Badge variant="secondary" className="text-sm">
+                    {translation.aboutMe.professionalSummary.badges.agile}
+                  </Badge>
+                  <Badge variant="secondary" className="text-sm">
+                    {translation.aboutMe.professionalSummary.badges.cloud}
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
@@ -105,17 +113,43 @@ export default function SobreMiPage() {
                 <div className="border-l-2 border-primary/30 pl-6 relative">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-foreground">{translation.aboutMe.experience.positions.softwareEngineer.title}</h3>
-                    <span className="text-sm text-muted-foreground">{translation.aboutMe.experience.positions.softwareEngineer.period}</span>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .softwareEngineer.title
+                      }
+                    </h3>
+                    <span className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .softwareEngineer.period
+                      }
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{translation.aboutMe.experience.positions.softwareEngineer.company}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {
+                      translation.aboutMe.experience.positions.softwareEngineer
+                        .company
+                    }
+                  </p>
                   <p className="text-sm text-foreground mb-3">
-                    {translation.aboutMe.experience.positions.softwareEngineer.description}
+                    {
+                      translation.aboutMe.experience.positions.softwareEngineer
+                        .description
+                    }
                   </p>
                   <div className="flex flex-wrap gap-1">
-                    {translation.aboutMe.experience.positions.softwareEngineer.technologies.map((tech, index) => (
-                      <Badge key={index} variant="outline" className="text-xs">{tech}</Badge>
-                    ))}
+                    {translation.aboutMe.experience.positions.softwareEngineer.technologies.map(
+                      (tech, index) => (
+                        <Badge
+                          key={index}
+                          variant="outline"
+                          className="text-xs"
+                        >
+                          {tech}
+                        </Badge>
+                      ),
+                    )}
                   </div>
                 </div>
 
@@ -123,17 +157,43 @@ export default function SobreMiPage() {
                 <div className="border-l-2 border-primary/30 pl-6 relative">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-foreground">{translation.aboutMe.experience.positions.frontAgileDeveloper.title}</h3>
-                    <span className="text-sm text-muted-foreground">{translation.aboutMe.experience.positions.frontAgileDeveloper.period}</span>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .frontAgileDeveloper.title
+                      }
+                    </h3>
+                    <span className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .frontAgileDeveloper.period
+                      }
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{translation.aboutMe.experience.positions.frontAgileDeveloper.company}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {
+                      translation.aboutMe.experience.positions
+                        .frontAgileDeveloper.company
+                    }
+                  </p>
                   <p className="text-sm text-foreground mb-3">
-                    {translation.aboutMe.experience.positions.frontAgileDeveloper.description}
+                    {
+                      translation.aboutMe.experience.positions
+                        .frontAgileDeveloper.description
+                    }
                   </p>
                   <div className="flex flex-wrap gap-1">
-                    {translation.aboutMe.experience.positions.frontAgileDeveloper.technologies.map((tech, index) => (
-                      <Badge key={index} variant="outline" className="text-xs">{tech}</Badge>
-                    ))}
+                    {translation.aboutMe.experience.positions.frontAgileDeveloper.technologies.map(
+                      (tech, index) => (
+                        <Badge
+                          key={index}
+                          variant="outline"
+                          className="text-xs"
+                        >
+                          {tech}
+                        </Badge>
+                      ),
+                    )}
                   </div>
                 </div>
 
@@ -141,17 +201,43 @@ export default function SobreMiPage() {
                 <div className="border-l-2 border-primary/30 pl-6 relative">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-foreground">{translation.aboutMe.experience.positions.fullStackDeveloper.title}</h3>
-                    <span className="text-sm text-muted-foreground">{translation.aboutMe.experience.positions.fullStackDeveloper.period}</span>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .fullStackDeveloper.title
+                      }
+                    </h3>
+                    <span className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .fullStackDeveloper.period
+                      }
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{translation.aboutMe.experience.positions.fullStackDeveloper.company}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {
+                      translation.aboutMe.experience.positions
+                        .fullStackDeveloper.company
+                    }
+                  </p>
                   <p className="text-sm text-foreground mb-3">
-                    {translation.aboutMe.experience.positions.fullStackDeveloper.description}
+                    {
+                      translation.aboutMe.experience.positions
+                        .fullStackDeveloper.description
+                    }
                   </p>
                   <div className="flex flex-wrap gap-1">
-                    {translation.aboutMe.experience.positions.fullStackDeveloper.technologies.map((tech, index) => (
-                      <Badge key={index} variant="outline" className="text-xs">{tech}</Badge>
-                    ))}
+                    {translation.aboutMe.experience.positions.fullStackDeveloper.technologies.map(
+                      (tech, index) => (
+                        <Badge
+                          key={index}
+                          variant="outline"
+                          className="text-xs"
+                        >
+                          {tech}
+                        </Badge>
+                      ),
+                    )}
                   </div>
                 </div>
 
@@ -159,24 +245,60 @@ export default function SobreMiPage() {
                 <div className="border-l-2 border-primary/30 pl-6 relative">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-foreground">{translation.aboutMe.experience.positions.developmentEngineer.title}</h3>
-                    <span className="text-sm text-muted-foreground">{translation.aboutMe.experience.positions.developmentEngineer.period}</span>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .developmentEngineer.title
+                      }
+                    </h3>
+                    <span className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .developmentEngineer.period
+                      }
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{translation.aboutMe.experience.positions.developmentEngineer.company}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {
+                      translation.aboutMe.experience.positions
+                        .developmentEngineer.company
+                    }
+                  </p>
                   <p className="text-sm text-foreground mb-3">
-                    {translation.aboutMe.experience.positions.developmentEngineer.description}
+                    {
+                      translation.aboutMe.experience.positions
+                        .developmentEngineer.description
+                    }
                   </p>
                 </div>
 
                 <div className="border-l-2 border-primary/30 pl-6 relative">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-foreground">{translation.aboutMe.experience.positions.developmentAnalyst.title}</h3>
-                    <span className="text-sm text-muted-foreground">{translation.aboutMe.experience.positions.developmentAnalyst.period}</span>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .developmentAnalyst.title
+                      }
+                    </h3>
+                    <span className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.experience.positions
+                          .developmentAnalyst.period
+                      }
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{translation.aboutMe.experience.positions.developmentAnalyst.company}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {
+                      translation.aboutMe.experience.positions
+                        .developmentAnalyst.company
+                    }
+                  </p>
                   <p className="text-sm text-foreground mb-3">
-                    {translation.aboutMe.experience.positions.developmentAnalyst.description}
+                    {
+                      translation.aboutMe.experience.positions
+                        .developmentAnalyst.description
+                    }
                   </p>
                 </div>
               </CardContent>
@@ -196,27 +318,54 @@ export default function SobreMiPage() {
                 <div className="flex items-start gap-4">
                   <GraduationCap className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.education.studies.english.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.education.studies.english.institution}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.education.studies.english.period}</p>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.education.studies.english.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.education.studies.english
+                          .institution
+                      }
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.education.studies.english.period}
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <GraduationCap className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.education.studies.masters.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.education.studies.masters.institution}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.education.studies.masters.period}</p>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.education.studies.masters.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.education.studies.masters
+                          .institution
+                      }
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.education.studies.masters.period}
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <GraduationCap className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.education.studies.bachelor.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.education.studies.bachelor.institution}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.education.studies.bachelor.period}</p>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.education.studies.bachelor.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {
+                        translation.aboutMe.education.studies.bachelor
+                          .institution
+                      }
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.education.studies.bachelor.period}
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -236,40 +385,84 @@ export default function SobreMiPage() {
                 <div className="flex items-start gap-4">
                   <Award className="w-5 h-5 text-amber-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.certifications.items.scrum.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.certifications.items.scrum.issuer}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.certifications.items.scrum.period}</p>
-                    <Badge variant="secondary" className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200">{translation.aboutMe.certifications.items.scrum.status}</Badge>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.certifications.items.scrum.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {translation.aboutMe.certifications.items.scrum.issuer}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.certifications.items.scrum.period}
+                    </p>
+                    <Badge
+                      variant="secondary"
+                      className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200"
+                    >
+                      {translation.aboutMe.certifications.items.scrum.status}
+                    </Badge>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <Award className="w-5 h-5 text-amber-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.certifications.items.android.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.certifications.items.android.issuer}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.certifications.items.android.period}</p>
-                    <Badge variant="secondary" className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200">{translation.aboutMe.certifications.items.android.status}</Badge>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.certifications.items.android.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {translation.aboutMe.certifications.items.android.issuer}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.certifications.items.android.period}
+                    </p>
+                    <Badge
+                      variant="secondary"
+                      className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200"
+                    >
+                      {translation.aboutMe.certifications.items.android.status}
+                    </Badge>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <Award className="w-5 h-5 text-amber-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.certifications.items.aws.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.certifications.items.aws.issuer}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.certifications.items.aws.period}</p>
-                    <Badge variant="secondary" className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200">{translation.aboutMe.certifications.items.aws.status}</Badge>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.certifications.items.aws.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {translation.aboutMe.certifications.items.aws.issuer}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.certifications.items.aws.period}
+                    </p>
+                    <Badge
+                      variant="secondary"
+                      className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200"
+                    >
+                      {translation.aboutMe.certifications.items.aws.status}
+                    </Badge>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <Award className="w-5 h-5 text-amber-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground">{translation.aboutMe.certifications.items.java.title}</h4>
-                    <p className="text-sm text-muted-foreground">{translation.aboutMe.certifications.items.java.issuer}</p>
-                    <p className="text-xs text-muted-foreground">{translation.aboutMe.certifications.items.java.period}</p>
-                    <Badge variant="secondary" className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200">{translation.aboutMe.certifications.items.java.status}</Badge>
+                    <h4 className="font-semibold text-foreground">
+                      {translation.aboutMe.certifications.items.java.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {translation.aboutMe.certifications.items.java.issuer}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {translation.aboutMe.certifications.items.java.period}
+                    </p>
+                    <Badge
+                      variant="secondary"
+                      className="mt-1 text-xs bg-amber-50 text-amber-700 border-amber-200"
+                    >
+                      {translation.aboutMe.certifications.items.java.status}
+                    </Badge>
                   </div>
                 </div>
               </CardContent>
@@ -285,38 +478,62 @@ export default function SobreMiPage() {
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.skills.categories.frontend}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      {translation.aboutMe.skills.categories.frontend}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
-                      {translation.aboutMe.skills.technologies.frontend.map((tech, index) => (
-                        <Badge key={index} variant="secondary">{tech}</Badge>
-                      ))}
+                      {translation.aboutMe.skills.technologies.frontend.map(
+                        (tech, index) => (
+                          <Badge key={index} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ),
+                      )}
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.skills.categories.backend}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      {translation.aboutMe.skills.categories.backend}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
-                      {translation.aboutMe.skills.technologies.backend.map((tech, index) => (
-                        <Badge key={index} variant="secondary">{tech}</Badge>
-                      ))}
+                      {translation.aboutMe.skills.technologies.backend.map(
+                        (tech, index) => (
+                          <Badge key={index} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ),
+                      )}
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.skills.categories.mobile}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      {translation.aboutMe.skills.categories.mobile}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
-                      {translation.aboutMe.skills.technologies.mobile.map((tech, index) => (
-                        <Badge key={index} variant="secondary">{tech}</Badge>
-                      ))}
+                      {translation.aboutMe.skills.technologies.mobile.map(
+                        (tech, index) => (
+                          <Badge key={index} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ),
+                      )}
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.skills.categories.cloudDevOps}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      {translation.aboutMe.skills.categories.cloudDevOps}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
-                      {translation.aboutMe.skills.technologies.cloudDevOps.map((tech, index) => (
-                        <Badge key={index} variant="secondary">{tech}</Badge>
-                      ))}
+                      {translation.aboutMe.skills.technologies.cloudDevOps.map(
+                        (tech, index) => (
+                          <Badge key={index} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ),
+                      )}
                     </div>
                   </div>
                 </div>
@@ -328,79 +545,161 @@ export default function SobreMiPage() {
           <motion.div variants={fadeInUp} className="mb-8">
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardHeader>
-                <CardTitle>{translation.aboutMe.additionalInfo.title}</CardTitle>
+                <CardTitle>
+                  {translation.aboutMe.additionalInfo.title}
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.additionalInfo.workMethodologies.title}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      {
+                        translation.aboutMe.additionalInfo.workMethodologies
+                          .title
+                      }
+                    </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      {translation.aboutMe.additionalInfo.workMethodologies.items.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          {item}
-                        </li>
-                      ))}
+                      {translation.aboutMe.additionalInfo.workMethodologies.items.map(
+                        (item, index) => (
+                          <li key={index} className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            {item}
+                          </li>
+                        ),
+                      )}
                     </ul>
                   </div>
-                  
+
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.additionalInfo.experienceSectors.title}</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      {
+                        translation.aboutMe.additionalInfo.experienceSectors
+                          .title
+                      }
+                    </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      {translation.aboutMe.additionalInfo.experienceSectors.items.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          {item}
-                        </li>
-                      ))}
+                      {translation.aboutMe.additionalInfo.experienceSectors.items.map(
+                        (item, index) => (
+                          <li key={index} className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                            {item}
+                          </li>
+                        ),
+                      )}
                     </ul>
                   </div>
                 </div>
-                
+
                 <div className="pt-4 border-t border-border/30">
-                  <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.additionalInfo.achievements.title}</h4>
+                  <h4 className="font-semibold text-foreground mb-3">
+                    {translation.aboutMe.additionalInfo.achievements.title}
+                  </h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="p-4 bg-muted/30 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-2">{translation.aboutMe.additionalInfo.achievements.items.aunaProject.title}</h5>
+                      <h5 className="font-medium text-foreground mb-2">
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .aunaProject.title
+                        }
+                      </h5>
                       <p className="text-sm text-muted-foreground">
-                        {translation.aboutMe.additionalInfo.achievements.items.aunaProject.description}
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .aunaProject.description
+                        }
                       </p>
                     </div>
                     <div className="p-4 bg-muted/30 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-2">{translation.aboutMe.additionalInfo.achievements.items.bffArchitecture.title}</h5>
+                      <h5 className="font-medium text-foreground mb-2">
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .bffArchitecture.title
+                        }
+                      </h5>
                       <p className="text-sm text-muted-foreground">
-                        {translation.aboutMe.additionalInfo.achievements.items.bffArchitecture.description}
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .bffArchitecture.description
+                        }
                       </p>
                     </div>
                     <div className="p-4 bg-muted/30 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-2">{translation.aboutMe.additionalInfo.achievements.items.microfrontends.title}</h5>
+                      <h5 className="font-medium text-foreground mb-2">
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .microfrontends.title
+                        }
+                      </h5>
                       <p className="text-sm text-muted-foreground">
-                        {translation.aboutMe.additionalInfo.achievements.items.microfrontends.description}
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .microfrontends.description
+                        }
                       </p>
                     </div>
                     <div className="p-4 bg-muted/30 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-2">{translation.aboutMe.additionalInfo.achievements.items.performanceOptimization.title}</h5>
+                      <h5 className="font-medium text-foreground mb-2">
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .performanceOptimization.title
+                        }
+                      </h5>
                       <p className="text-sm text-muted-foreground">
-                        {translation.aboutMe.additionalInfo.achievements.items.performanceOptimization.description}
+                        {
+                          translation.aboutMe.additionalInfo.achievements.items
+                            .performanceOptimization.description
+                        }
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-4 border-t border-border/30">
-                  <h4 className="font-semibold text-foreground mb-3">{translation.aboutMe.additionalInfo.softSkills.title}</h4>
+                  <h4 className="font-semibold text-foreground mb-3">
+                    {translation.aboutMe.additionalInfo.softSkills.title}
+                  </h4>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center p-3 bg-muted/20 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-1">{translation.aboutMe.additionalInfo.softSkills.items.technicalLeadership.title}</h5>
-                      <p className="text-xs text-muted-foreground">{translation.aboutMe.additionalInfo.softSkills.items.technicalLeadership.description}</p>
+                      <h5 className="font-medium text-foreground mb-1">
+                        {
+                          translation.aboutMe.additionalInfo.softSkills.items
+                            .technicalLeadership.title
+                        }
+                      </h5>
+                      <p className="text-xs text-muted-foreground">
+                        {
+                          translation.aboutMe.additionalInfo.softSkills.items
+                            .technicalLeadership.description
+                        }
+                      </p>
                     </div>
                     <div className="text-center p-3 bg-muted/20 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-1">{translation.aboutMe.additionalInfo.softSkills.items.problemSolving.title}</h5>
-                      <p className="text-xs text-muted-foreground">{translation.aboutMe.additionalInfo.softSkills.items.problemSolving.description}</p>
+                      <h5 className="font-medium text-foreground mb-1">
+                        {
+                          translation.aboutMe.additionalInfo.softSkills.items
+                            .problemSolving.title
+                        }
+                      </h5>
+                      <p className="text-xs text-muted-foreground">
+                        {
+                          translation.aboutMe.additionalInfo.softSkills.items
+                            .problemSolving.description
+                        }
+                      </p>
                     </div>
                     <div className="text-center p-3 bg-muted/20 rounded-lg">
-                      <h5 className="font-medium text-foreground mb-1">{translation.aboutMe.additionalInfo.softSkills.items.communication.title}</h5>
-                      <p className="text-xs text-muted-foreground">{translation.aboutMe.additionalInfo.softSkills.items.communication.description}</p>
+                      <h5 className="font-medium text-foreground mb-1">
+                        {
+                          translation.aboutMe.additionalInfo.softSkills.items
+                            .communication.title
+                        }
+                      </h5>
+                      <p className="text-xs text-muted-foreground">
+                        {
+                          translation.aboutMe.additionalInfo.softSkills.items
+                            .communication.description
+                        }
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -420,7 +719,7 @@ export default function SobreMiPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild>
-                    <Link 
+                    <Link
                       href="https://wa.me/51969960969?text=Hola%20Yuri,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20oportunidades%20de%20trabajo%20o%20proyectos%20freelance."
                       target="_blank"
                       rel="noopener noreferrer"
@@ -440,5 +739,5 @@ export default function SobreMiPage() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
