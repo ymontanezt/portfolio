@@ -141,13 +141,14 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold text-primary cursor-pointer"
+            className="text-xl font-bold text-primary cursor-pointer min-h-[44px] min-w-[44px] flex items-center"
             onClick={() => scrollToSection("home")}
+            aria-label="Ir al inicio - michcode"
           >
             {"<michcode />"}
-          </motion.div>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -155,13 +156,14 @@ const Navigation: React.FC = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                className={`px-3 py-2 text-sm font-medium transition-colors min-h-[44px] min-w-[44px] flex items-center ${
                   activeSection === item.id
                     ? "text-primary border-b-2 border-primary"
                     : "text-muted-foreground hover:text-primary"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={`Ir a la sección ${item.label}`}
               >
                 {item.label}
               </motion.button>
@@ -172,11 +174,12 @@ const Navigation: React.FC = () => {
 
               <motion.button
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors min-h-[44px] min-w-[44px]"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={`Cambiar idioma a ${language === "es" ? "inglés" : "español"}`}
               >
-                <Globe size={16} />
+                <Globe size={16} aria-hidden="true" />
                 <span className="uppercase">{language}</span>
               </motion.button>
             </div>
