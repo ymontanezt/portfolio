@@ -1,57 +1,71 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Award, Code, Cloud, Database, Globe } from "lucide-react"
-import { useSkills, useCertifications } from "@/hooks/usePortfolioData"
-import { useI18n } from "@/contexts/I18nContext"
-import LoadingSpinner from "@/components/LoadingSpinner"
-import ErrorMessage from "@/components/ErrorMessage"
-import GitHubStats from "@/components/GitHubStats"
-import TechIcon from "@/components/TechIcon"
+import ErrorMessage from "@/components/ErrorMessage";
+import GitHubStats from "@/components/GitHubStats";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import TechIcon from "@/components/TechIcon";
+import { useI18n } from "@/contexts/I18nContext";
+import { useCertifications, useSkills } from "@/hooks/usePortfolioData";
+import { motion } from "framer-motion";
+import { Award } from "lucide-react";
 
 // Principio de Responsabilidad Única (SRP)
 interface Certification {
-  name: string
-  issuer: string
-  year: string
+  name: string;
+  issuer: string;
+  year: string;
 }
 
 // Función para obtener años de experiencia basado en el nivel
 const getYearsFromLevel = (level: string): string => {
   switch (level) {
-    case "Expert": return "5+"
-    case "Advanced": return "3+"
-    case "Intermediate": return "2+"
-    case "Beginner": return "1+"
-    default: return "2+"
+    case "Expert":
+      return "5+";
+    case "Advanced":
+      return "3+";
+    case "Intermediate":
+      return "2+";
+    case "Beginner":
+      return "1+";
+    default:
+      return "2+";
   }
-}
+};
 
 const CERTIFICATIONS: Certification[] = [
-  { name: "Ingeniero de Sistemas", issuer: "Universidad Nacional", year: "2018" },
+  {
+    name: "Ingeniero de Sistemas",
+    issuer: "Universidad Nacional",
+    year: "2018",
+  },
   { name: "Spring Framework Professional", issuer: "Pivotal", year: "2022" },
   { name: "AWS Cloud Practitioner", issuer: "AWS", year: "2023" },
-  { name: "React Developer", issuer: "Meta", year: "2023" }
-]
-
+  { name: "React Developer", issuer: "Meta", year: "2023" },
+];
 
 // Principio de Inversión de Dependencias (DIP) - Componente reutilizable
 const CertificationBadge: React.FC<{ cert: Certification }> = ({ cert }) => (
   <div className="flex items-center gap-2 p-3 rounded-lg bg-primary/5 border border-primary/20">
     <Award className="w-4 h-4 text-primary flex-shrink-0" />
     <div className="min-w-0 flex-1">
-      <p className="font-medium text-sm text-foreground truncate">{cert.name}</p>
-      <p className="text-xs text-muted-foreground">{cert.issuer} • {cert.year}</p>
+      <p className="font-medium text-sm text-foreground truncate">
+        {cert.name}
+      </p>
+      <p className="text-xs text-muted-foreground">
+        {cert.issuer} • {cert.year}
+      </p>
     </div>
   </div>
-)
+);
 
 export default function Skills() {
-  const { translation, language } = useI18n()
-  const { skills, loading, error } = useSkills(language)
-  const { certifications, loading: certLoading, error: certError } = useCertifications()
+  const { translation, language } = useI18n();
+  const { skills, loading, error } = useSkills(language);
+  const {
+    certifications,
+    loading: certLoading,
+    error: certError,
+  } = useCertifications();
 
   // Estados de carga y error - Principio de Responsabilidad Única
   if (loading) {
@@ -69,7 +83,7 @@ export default function Skills() {
           <LoadingSpinner size="lg" className="py-20" />
         </div>
       </section>
-    )
+    );
   }
 
   if (error) {
@@ -87,7 +101,7 @@ export default function Skills() {
           <ErrorMessage message={error} />
         </div>
       </section>
-    )
+    );
   }
 
   return (
@@ -109,37 +123,67 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        {/* Technical Skills Grid */}
+        {/* Technical Skills - Horizontal Scroll Design */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-primary-enhanced mb-2">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-primary-enhanced mb-2">
               {translation.skills.techStackTitle}
             </h3>
-            <p className="text-muted-enhanced">
+            <p className="text-sm sm:text-base text-muted-enhanced">
               {translation.skills.techStackSubtitle}
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+          {/* Responsive Skills Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
             {skills.slice(0, 12).map((skill, index) => (
               <motion.div
                 key={skill.id}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
+                className="group"
               >
-                <TechIcon 
-                  name={skill.name}
-                  level={skill.level}
-                  years={getYearsFromLevel(skill.level)}
-                />
+                <div className="bg-gradient-to-br from-background/90 to-background/70 rounded-xl border border-border/40 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 hover:scale-105 flex flex-col items-center justify-center p-3 sm:p-4 h-20 sm:h-24">
+                  {/* Icon */}
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 mb-2 flex items-center justify-center">
+                    <TechIcon
+                      name={skill.name}
+                      level={skill.level}
+                      years={getYearsFromLevel(skill.level)}
+                      size="sm"
+                    />
+                  </div>
+
+                  {/* Skill Name */}
+                  <span className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors duration-200 text-center leading-tight mb-1">
+                    {skill.name}
+                  </span>
+
+                  {/* Level Badge */}
+                  <div>
+                    <span
+                      className={`inline-block px-1.5 py-0.5 rounded-full text-xs font-medium ${
+                        skill.level === "Expert"
+                          ? "bg-purple-500/20 text-purple-300"
+                          : skill.level === "Advanced"
+                            ? "bg-green-500/20 text-green-300"
+                            : skill.level === "Intermediate"
+                              ? "bg-blue-500/20 text-blue-300"
+                              : "bg-yellow-500/20 text-yellow-300"
+                      }`}
+                    >
+                      {skill.level}
+                    </span>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -161,7 +205,7 @@ export default function Skills() {
               {translation.skills.certificationsSubtitle}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {certifications.map((cert, index) => (
               <motion.div
@@ -171,11 +215,13 @@ export default function Skills() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <CertificationBadge cert={{
-                  name: cert.name,
-                  issuer: cert.issuer,
-                  year: cert.date.split(' ')[1] || cert.date
-                }} />
+                <CertificationBadge
+                  cert={{
+                    name: cert.name,
+                    issuer: cert.issuer,
+                    year: cert.date.split(" ")[1] || cert.date,
+                  }}
+                />
               </motion.div>
             ))}
           </div>
@@ -193,5 +239,5 @@ export default function Skills() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

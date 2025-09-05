@@ -1,29 +1,30 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter, Fira_Code } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import { I18nProvider } from "../contexts/I18nContext"
-import { ThemeProvider } from "../contexts/ThemeContext"
-import ErrorBoundary from "../components/ErrorBoundary"
-import Footer from "../components/Footer"
-import "./globals.css"
+import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next";
+import { Fira_Code, Inter } from "next/font/google";
+import type React from "react";
+import ErrorBoundary from "../components/ErrorBoundary";
+import Footer from "../components/Footer";
+import { I18nProvider } from "../contexts/I18nContext";
+import { ThemeProvider } from "../contexts/ThemeContext";
+import "./globals.css";
+import { themeScript } from "./theme-script";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-})
+});
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-fira-code",
-})
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://michcode.dev'),
-  title: "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas | Full Stack Developer",
+  metadataBase: new URL("https://michcode.dev"),
+  title:
+    "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas | Full Stack Developer",
   description:
     "Portfolio profesional de Yuri Michael Montañez Tuncar (michcode) - Ingeniero de Sistemas con más de 8 años de experiencia en desarrollo full-stack, Spring Framework, Angular, React, React Native y arquitecturas de microservicios.",
   keywords: [
@@ -44,7 +45,9 @@ export const metadata: Metadata = {
     "Docker",
     "Portfolio",
   ],
-  authors: [{ name: "Yuri Michael Montañez Tuncar", url: "https://michcode.dev" }],
+  authors: [
+    { name: "Yuri Michael Montañez Tuncar", url: "https://michcode.dev" },
+  ],
   creator: "Yuri Michael Montañez Tuncar",
   publisher: "michcode",
   robots: {
@@ -64,7 +67,8 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     url: "https://michcode.dev",
     siteName: "michcode - Yuri Montañez Portfolio",
-    title: "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas | Full Stack Developer",
+    title:
+      "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas | Full Stack Developer",
     description:
       "Portfolio profesional mostrando experiencia en desarrollo full-stack, Spring Framework, Angular, React, React Native y arquitecturas de microservicios.",
     images: [
@@ -79,7 +83,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas",
-    description: "Portfolio profesional mostrando experiencia en desarrollo full-stack y tecnologías modernas.",
+    description:
+      "Portfolio profesional mostrando experiencia en desarrollo full-stack y tecnologías modernas.",
     images: ["/yuri-montanez-profile.jpg"],
     creator: "@michcode",
   },
@@ -94,19 +99,26 @@ export const metadata: Metadata = {
     },
   },
   generator: "Next.js",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es" suppressHydrationWarning>
       <head>
         {/* JSON-LD temporalmente removido para debug */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: themeScript,
+          }}
+        />
       </head>
-      <body className={`font-sans ${inter.variable} ${firaCode.variable} antialiased`}>
+      <body
+        className={`font-sans ${inter.variable} ${firaCode.variable} antialiased`}
+      >
         <ErrorBoundary>
           <ThemeProvider>
             <I18nProvider>
@@ -118,5 +130,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

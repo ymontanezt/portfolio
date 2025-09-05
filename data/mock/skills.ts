@@ -1,289 +1,295 @@
-import type { Skill } from "@/types/portfolio"
+import type { Skill } from "@/types/portfolio";
 
 export const mockSkills: Skill[] = [
-  // Backend
+  // Backend (5 skills)
   {
     id: "1",
     name: "Java",
     level: "Expert",
-    category: "Backend"
+    category: "Backend",
   },
   {
     id: "2",
     name: "Spring Boot",
     level: "Expert",
-    category: "Backend"
+    category: "Backend",
   },
   {
     id: "3",
-    name: "Node.js",
+    name: "Spring Security",
     level: "Advanced",
-    category: "Backend"
+    category: "Backend",
   },
   {
     id: "4",
-    name: "Express.js",
+    name: "Spring Data",
     level: "Advanced",
-    category: "Backend"
+    category: "Backend",
   },
   {
     id: "5",
-    name: "Python",
+    name: "Spring WebFlux",
     level: "Intermediate",
-    category: "Backend"
-  },
-  {
-    id: "6",
-    name: "PHP",
-    level: "Advanced",
-    category: "Backend"
+    category: "Backend",
   },
 
-  // Frontend Web
+  // Frontend Web (12 skills)
   {
-    id: "7",
+    id: "6",
     name: "React",
     level: "Expert",
-    category: "Frontend Web"
+    category: "Frontend Web",
+  },
+  {
+    id: "7",
+    name: "Angular",
+    level: "Expert",
+    category: "Frontend Web",
   },
   {
     id: "8",
-    name: "Angular",
-    level: "Expert",
-    category: "Frontend Web"
+    name: "Next.js",
+    level: "Advanced",
+    category: "Frontend Web",
   },
   {
     id: "9",
-    name: "Vue.js",
-    level: "Advanced",
-    category: "Frontend Web"
+    name: "TypeScript",
+    level: "Expert",
+    category: "Frontend Web",
   },
   {
     id: "10",
-    name: "TypeScript",
+    name: "JavaScript",
     level: "Expert",
-    category: "Frontend Web"
+    category: "Frontend Web",
   },
   {
     id: "11",
-    name: "JavaScript",
-    level: "Expert",
-    category: "Frontend Web"
+    name: "Tailwind CSS",
+    level: "Advanced",
+    category: "Frontend Web",
   },
   {
     id: "12",
-    name: "HTML5",
-    level: "Expert",
-    category: "Frontend Web"
+    name: "Angular Material",
+    level: "Advanced",
+    category: "Frontend Web",
   },
   {
     id: "13",
-    name: "CSS3",
-    level: "Expert",
-    category: "Frontend Web"
+    name: "Angular CLI",
+    level: "Advanced",
+    category: "Frontend Web",
   },
   {
     id: "14",
-    name: "Sass/SCSS",
+    name: "React Router",
     level: "Advanced",
-    category: "Frontend Web"
+    category: "Frontend Web",
   },
-
-  // Frontend Mobile
   {
     id: "15",
-    name: "React Native",
-    level: "Advanced",
-    category: "Frontend Mobile"
+    name: "React Query",
+    level: "Intermediate",
+    category: "Frontend Web",
   },
   {
     id: "16",
-    name: "Ionic",
-    level: "Advanced",
-    category: "Frontend Mobile"
+    name: "Framer Motion",
+    level: "Intermediate",
+    category: "Frontend Web",
   },
   {
     id: "17",
-    name: "Android (Nativo)",
+    name: "Zustand",
     level: "Intermediate",
-    category: "Frontend Mobile"
-  },
-  {
-    id: "18",
-    name: "Flutter",
-    level: "Intermediate",
-    category: "Frontend Mobile"
+    category: "Frontend Web",
   },
 
-  // Base de Datos
+  // Frontend Mobile (6 skills)
+  {
+    id: "18",
+    name: "React Native",
+    level: "Expert",
+    category: "Frontend Mobile",
+  },
   {
     id: "19",
-    name: "PostgreSQL",
+    name: "Ionic",
     level: "Advanced",
-    category: "Base de Datos"
+    category: "Frontend Mobile",
   },
   {
     id: "20",
-    name: "MySQL",
-    level: "Advanced",
-    category: "Base de Datos"
+    name: "Android (Nativo)",
+    level: "Intermediate",
+    category: "Frontend Mobile",
   },
   {
     id: "21",
-    name: "MongoDB",
-    level: "Advanced",
-    category: "Base de Datos"
+    name: "Jetpack Compose",
+    level: "Intermediate",
+    category: "Frontend Mobile",
   },
   {
     id: "22",
-    name: "Redis",
-    level: "Intermediate",
-    category: "Base de Datos"
+    name: "Capacitor",
+    level: "Advanced",
+    category: "Frontend Mobile",
   },
   {
     id: "23",
-    name: "Oracle",
+    name: "Cordova",
     level: "Intermediate",
-    category: "Base de Datos"
+    category: "Frontend Mobile",
   },
 
-  // Cloud & DevOps
+  // Base de Datos (4 skills)
   {
     id: "24",
-    name: "AWS",
-    level: "Advanced",
-    category: "Cloud & DevOps"
+    name: "PostgreSQL",
+    level: "Expert",
+    category: "Base de Datos",
   },
   {
     id: "25",
-    name: "Docker",
+    name: "MySQL",
     level: "Advanced",
-    category: "Cloud & DevOps"
+    category: "Base de Datos",
   },
   {
     id: "26",
-    name: "Kubernetes",
-    level: "Intermediate",
-    category: "Cloud & DevOps"
+    name: "MongoDB",
+    level: "Advanced",
+    category: "Base de Datos",
   },
   {
     id: "27",
-    name: "Jenkins",
+    name: "Firebase",
     level: "Intermediate",
-    category: "Cloud & DevOps"
+    category: "Base de Datos",
   },
+
+  // Cloud & DevOps (6 skills)
   {
     id: "28",
-    name: "Git",
-    level: "Expert",
-    category: "Cloud & DevOps"
+    name: "AWS",
+    level: "Advanced",
+    category: "Cloud & DevOps",
   },
   {
     id: "29",
-    name: "CI/CD",
+    name: "Docker",
     level: "Advanced",
-    category: "Cloud & DevOps"
+    category: "Cloud & DevOps",
   },
-
-  // Librerías
   {
     id: "30",
-    name: "Redux",
-    level: "Advanced",
-    category: "Librerías"
+    name: "Kubernetes",
+    level: "Intermediate",
+    category: "Cloud & DevOps",
   },
   {
     id: "31",
-    name: "Socket.io",
-    level: "Advanced",
-    category: "Librerías"
+    name: "Jenkins",
+    level: "Intermediate",
+    category: "Cloud & DevOps",
   },
   {
     id: "32",
-    name: "D3.js",
-    level: "Intermediate",
-    category: "Librerías"
+    name: "Git",
+    level: "Expert",
+    category: "Cloud & DevOps",
   },
   {
     id: "33",
-    name: "Chart.js",
+    name: "CI/CD",
     level: "Advanced",
-    category: "Librerías"
+    category: "Cloud & DevOps",
   },
+
+  // Librerías (6 skills)
   {
     id: "34",
-    name: "Lodash",
+    name: "Redux Toolkit",
     level: "Advanced",
-    category: "Librerías"
+    category: "Librerías",
   },
   {
     id: "35",
-    name: "Axios",
-    level: "Expert",
-    category: "Librerías"
+    name: "NgRx",
+    level: "Advanced",
+    category: "Librerías",
   },
-
-  // Arquitectura
   {
     id: "36",
-    name: "Microservicios",
+    name: "React Hook Form",
     level: "Advanced",
-    category: "Arquitectura"
+    category: "Librerías",
   },
   {
     id: "37",
-    name: "RESTful APIs",
+    name: "Angular Forms",
     level: "Expert",
-    category: "Arquitectura"
+    category: "Librerías",
   },
   {
     id: "38",
-    name: "GraphQL",
-    level: "Intermediate",
-    category: "Arquitectura"
+    name: "Chart.js",
+    level: "Advanced",
+    category: "Librerías",
   },
   {
     id: "39",
-    name: "MVC",
-    level: "Expert",
-    category: "Arquitectura"
-  },
-  {
-    id: "40",
-    name: "Clean Architecture",
+    name: "Socket.io",
     level: "Advanced",
-    category: "Arquitectura"
+    category: "Librerías",
   },
 
-  // Metodologías
+  // Arquitectura (6 skills)
+  {
+    id: "40",
+    name: "Microservicios",
+    level: "Expert",
+    category: "Arquitectura",
+  },
   {
     id: "41",
-    name: "Scrum",
-    level: "Advanced",
-    category: "Metodologías"
+    name: "RESTful APIs",
+    level: "Expert",
+    category: "Arquitectura",
   },
   {
     id: "42",
-    name: "Agile",
-    level: "Advanced",
-    category: "Metodologías"
+    name: "Microfrontends",
+    level: "Intermediate",
+    category: "Arquitectura",
   },
   {
     id: "43",
-    name: "TDD",
+    name: "Module Federation",
     level: "Intermediate",
-    category: "Metodologías"
+    category: "Arquitectura",
   },
   {
     id: "44",
-    name: "Code Review",
-    level: "Expert",
-    category: "Metodologías"
+    name: "Clean Architecture",
+    level: "Advanced",
+    category: "Arquitectura",
   },
   {
     id: "45",
-    name: "Pair Programming",
+    name: "Event-Driven Architecture",
+    level: "Intermediate",
+    category: "Arquitectura",
+  },
+
+  // Metodologías (1 skill)
+  {
+    id: "46",
+    name: "Scrum/Agile",
     level: "Advanced",
-    category: "Metodologías"
-  }
-]
+    category: "Metodologías",
+  },
+];
