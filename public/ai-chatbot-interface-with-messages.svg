@@ -1,0 +1,47 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- Chat Header -->
+  <rect x="0" y="0" width="400" height="50" fill="#1e293b"/>
+  <circle cx="30" cy="25" r="12" fill="#10b981"/>
+  <text x="26" y="29" fill="#0f172a" font-family="system-ui" font-size="12">AI</text>
+  <text x="55" y="30" fill="#f1f5f9" font-family="system-ui" font-size="14" font-weight="bold">AI Assistant</text>
+  <circle cx="120" cy="25" r="4" fill="#10b981"/>
+  <text x="135" y="29" fill="#10b981" font-family="system-ui" font-size="12">Online</text>
+  
+  <!-- Chat Messages -->
+  <!-- User message -->
+  <rect x="80" y="70" width="300" height="40" rx="20" fill="#10b981"/>
+  <text x="100" y="85" fill="#0f172a" font-family="system-ui" font-size="12">Hello! Can you help me with React hooks?</text>
+  <text x="100" y="100" fill="#0f172a" font-family="system-ui" font-size="10" opacity="0.7">You - 2:34 PM</text>
+  
+  <!-- AI response -->
+  <rect x="20" y="130" width="320" height="60" rx="20" fill="#1e293b"/>
+  <text x="40" y="145" fill="#f1f5f9" font-family="system-ui" font-size="12">Of course! React hooks are functions that let you use state</text>
+  <text x="40" y="160" fill="#f1f5f9" font-family="system-ui" font-size="12">and other React features in functional components.</text>
+  <text x="40" y="175" fill="#64748b" font-family="system-ui" font-size="10">AI Assistant - 2:34 PM</text>
+  
+  <!-- User message -->
+  <rect x="100" y="210" width="280" height="40" rx="20" fill="#10b981"/>
+  <text x="120" y="225" fill="#0f172a" font-family="system-ui" font-size="12">Can you show me a useState example?</text>
+  <text x="120" y="240" fill="#0f172a" font-family="system-ui" font-size="10" opacity="0.7">You - 2:35 PM</text>
+  
+  <!-- Typing indicator -->
+  <rect x="20" y="270" width="60" height="20" rx="10" fill="#1e293b"/>
+  <circle cx="35" cy="280" r="2" fill="#64748b">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="45" cy="280" r="2" fill="#64748b">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="55" cy="280" r="2" fill="#64748b">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Input area -->
+  <rect x="20" y="270" width="320" height="20" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+  <text x="30" y="282" fill="#64748b" font-family="system-ui" font-size="10">Type your message...</text>
+  <circle cx="360" cy="280" r="8" fill="#10b981"/>
+  <text x="357" y="284" fill="#0f172a" font-family="system-ui" font-size="8">→</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="60" fill="url(#skyGradient)"/>
+  <text x="20" y="30" fill="#fff" font-family="system-ui" font-size="16" font-weight="bold">Weather Forecast</text>
+  <text x="20" y="45" fill="#fff" font-family="system-ui" font-size="12" opacity="0.8">📍 San Francisco, CA</text>
+  
+  <!-- Current Weather -->
+  <rect x="20" y="80" width="180" height="100" rx="12" fill="#1e293b"/>
+  <circle cx="80" cy="120" r="20" fill="#f59e0b"/>
+  <circle cx="85" cy="115" r="15" fill="#fbbf24"/>
+  <text x="120" y="115" fill="#f1f5f9" font-family="system-ui" font-size="24" font-weight="bold">72°F</text>
+  <text x="120" y="135" fill="#64748b" font-family="system-ui" font-size="12">Sunny</text>
+  <text x="120" y="150" fill="#64748b" font-family="system-ui" font-size="10">Feels like 75°F</text>
+  <text x="30" y="170" fill="#64748b" font-family="system-ui" font-size="10">💨 8 mph   💧 65%   👁 10 mi</text>
+  
+  <!-- 5-Day Forecast -->
+  <rect x="220" y="80" width="160" height="100" rx="12" fill="#1e293b"/>
+  <text x="230" y="100" fill="#f1f5f9" font-family="system-ui" font-size="12" font-weight="bold">5-Day Forecast</text>
+  
+  <!-- Day 1 -->
+  <text x="230" y="120" fill="#64748b" font-family="system-ui" font-size="10">Today</text>
+  <circle cx="290" cy="115" r="6" fill="#f59e0b"/>
+  <text x="310" y="120" fill="#f1f5f9" font-family="system-ui" font-size="10">72°/58°</text>
+  
+  <!-- Day 2 -->
+  <text x="230" y="135" fill="#64748b" font-family="system-ui" font-size="10">Tomorrow</text>
+  <circle cx="290" cy="130" r="6" fill="#64748b"/>
+  <circle cx="295" cy="127" r="3" fill="#f1f5f9"/>
+  <text x="310" y="135" fill="#f1f5f9" font-family="system-ui" font-size="10">68°/55°</text>
+  
+  <!-- Day 3 -->
+  <text x="230" y="150" fill="#64748b" font-family="system-ui" font-size="10">Wednesday</text>
+  <path d="M287 145 Q290 140 293 145 Q290 150 287 145" fill="#3b82f6"/>
+  <circle cx="290" cy="145" r="2" fill="#fff"/>
+  <text x="310" y="150" fill="#f1f5f9" font-family="system-ui" font-size="10">65°/52°</text>
+  
+  <!-- Day 4 -->
+  <text x="230" y="165" fill="#64748b" font-family="system-ui" font-size="10">Thursday</text>
+  <circle cx="290" cy="160" r="6" fill="#f59e0b"/>
+  <text x="310" y="165" fill="#f1f5f9" font-family="system-ui" font-size="10">70°/56°</text>
+  
+  <!-- Map Section -->
+  <rect x="20" y="200" width="360" height="80" rx="12" fill="#1e293b"/>
+  <text x="30" y="220" fill="#f1f5f9" font-family="system-ui" font-size="12" font-weight="bold">Weather Map</text>
+  
+  <!-- Simplified Map -->
+  <rect x="30" y="230" width="340" height="40" rx="6" fill="#0f172a"/>
+  
+  <!-- Map Elements -->
+  <circle cx="80" cy="245" r="8" fill="#10b981" opacity="0.3"/>
+  <circle cx="80" cy="245" r="4" fill="#10b981"/>
+  <text x="95" y="250" fill="#10b981" font-family="system-ui" font-size="8">Clear</text>
+  
+  <circle cx="150" cy="240" r="10" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="150" cy="240" r="5" fill="#3b82f6"/>
+  <text x="170" y="245" fill="#3b82f6" font-family="system-ui" font-size="8">Rain</text>
+  
+  <circle cx="220" cy="250" r="6" fill="#64748b" opacity="0.3"/>
+  <circle cx="220" cy="250" r="3" fill="#64748b"/>
+  <text x="235" y="255" fill="#64748b" font-family="system-ui" font-size="8">Clouds</text>
+  
+  <circle cx="290" cy="245" r="8" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="290" cy="245" r="4" fill="#f59e0b"/>
+  <text x="305" y="250" fill="#f59e0b" font-family="system-ui" font-size="8">Sunny</text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

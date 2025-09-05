@@ -1,0 +1,42 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="50" fill="#1e293b"/>
+  <circle cx="30" cy="25" r="6" fill="#10b981"/>
+  <rect x="50" y="20" width="100" height="10" rx="5" fill="#64748b"/>
+  <rect x="320" y="15" width="60" height="20" rx="10" fill="#10b981"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="50" width="80" height="250" fill="#1e293b"/>
+  <rect x="15" y="70" width="50" height="8" rx="4" fill="#64748b"/>
+  <rect x="15" y="90" width="40" height="8" rx="4" fill="#64748b"/>
+  <rect x="15" y="110" width="45" height="8" rx="4" fill="#10b981"/>
+  
+  <!-- Main content -->
+  <rect x="100" y="70" width="280" height="40" rx="8" fill="#1e293b"/>
+  <text x="120" y="95" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="bold">E-Commerce Dashboard</text>
+  
+  <!-- Cards -->
+  <rect x="100" y="130" width="90" height="60" rx="8" fill="#1e293b"/>
+  <rect x="110" y="140" width="20" height="20" rx="4" fill="#10b981"/>
+  <text x="140" y="155" fill="#f1f5f9" font-family="system-ui" font-size="12">Sales</text>
+  <text x="110" y="175" fill="#10b981" font-family="system-ui" font-size="14" font-weight="bold">$24,500</text>
+  
+  <rect x="200" y="130" width="90" height="60" rx="8" fill="#1e293b"/>
+  <rect x="210" y="140" width="20" height="20" rx="4" fill="#3b82f6"/>
+  <text x="240" y="155" fill="#f1f5f9" font-family="system-ui" font-size="12">Orders</text>
+  <text x="210" y="175" fill="#3b82f6" font-family="system-ui" font-size="14" font-weight="bold">1,429</text>
+  
+  <rect x="300" y="130" width="80" height="60" rx="8" fill="#1e293b"/>
+  <rect x="310" y="140" width="20" height="20" rx="4" fill="#f59e0b"/>
+  <text x="340" y="155" fill="#f1f5f9" font-family="system-ui" font-size="12">Users</text>
+  <text x="310" y="175" fill="#f59e0b" font-family="system-ui" font-size="14" font-weight="bold">8,942</text>
+  
+  <!-- Chart area -->
+  <rect x="100" y="210" width="280" height="80" rx="8" fill="#1e293b"/>
+  <path d="M120 260 L140 240 L160 250 L180 230 L200 245 L220 225 L240 235 L260 220 L280 230 L300 215 L320 225 L340 210 L360 220" 
+        stroke="#10b981" stroke-width="2" fill="none"/>
+  <text x="120" y="280" fill="#64748b" font-family="system-ui" font-size="10">Revenue Chart</text>
+</svg>

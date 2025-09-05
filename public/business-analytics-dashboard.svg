@@ -1,0 +1,63 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="50" fill="#1e293b"/>
+  <text x="20" y="30" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="bold">Analytics Dashboard</text>
+  <rect x="300" y="15" width="80" height="20" rx="10" fill="#3b82f6"/>
+  <text x="315" y="27" fill="#fff" font-family="system-ui" font-size="10">Export Data</text>
+  
+  <!-- KPI Cards -->
+  <rect x="20" y="70" width="90" height="60" rx="8" fill="#1e293b"/>
+  <text x="30" y="85" fill="#64748b" font-family="system-ui" font-size="10">Total Revenue</text>
+  <text x="30" y="105" fill="#10b981" font-family="system-ui" font-size="18" font-weight="bold">$142.5K</text>
+  <text x="30" y="120" fill="#10b981" font-family="system-ui" font-size="10">↗ +12.5%</text>
+  
+  <rect x="120" y="70" width="90" height="60" rx="8" fill="#1e293b"/>
+  <text x="130" y="85" fill="#64748b" font-family="system-ui" font-size="10">Active Users</text>
+  <text x="130" y="105" fill="#3b82f6" font-family="system-ui" font-size="18" font-weight="bold">24,832</text>
+  <text x="130" y="120" fill="#3b82f6" font-family="system-ui" font-size="10">↗ +8.2%</text>
+  
+  <rect x="220" y="70" width="90" height="60" rx="8" fill="#1e293b"/>
+  <text x="230" y="85" fill="#64748b" font-family="system-ui" font-size="10">Conversion</text>
+  <text x="230" y="105" fill="#f59e0b" font-family="system-ui" font-size="18" font-weight="bold">3.45%</text>
+  <text x="230" y="120" fill="#ef4444" font-family="system-ui" font-size="10">↘ -2.1%</text>
+  
+  <rect x="320" y="70" width="60" height="60" rx="8" fill="#1e293b"/>
+  <text x="330" y="85" fill="#64748b" font-family="system-ui" font-size="10">Orders</text>
+  <text x="330" y="105" fill="#8b5cf6" font-family="system-ui" font-size="18" font-weight="bold">1,429</text>
+  <text x="330" y="120" fill="#10b981" font-family="system-ui" font-size="10">↗ +5.7%</text>
+  
+  <!-- Main Chart -->
+  <rect x="20" y="150" width="240" height="130" rx="8" fill="#1e293b"/>
+  <text x="30" y="170" fill="#f1f5f9" font-family="system-ui" font-size="12" font-weight="bold">Revenue Trend</text>
+  
+  <!-- Bar Chart -->
+  <rect x="40" y="220" width="15" height="40" fill="#10b981"/>
+  <rect x="60" y="200" width="15" height="60" fill="#10b981"/>
+  <rect x="80" y="230" width="15" height="30" fill="#10b981"/>
+  <rect x="100" y="180" width="15" height="80" fill="#10b981"/>
+  <rect x="120" y="210" width="15" height="50" fill="#10b981"/>
+  <rect x="140" y="190" width="15" height="70" fill="#10b981"/>
+  <rect x="160" y="170" width="15" height="90" fill="#10b981"/>
+  <rect x="180" y="185" width="15" height="75" fill="#10b981"/>
+  <rect x="200" y="205" width="15" height="55" fill="#10b981"/>
+  <rect x="220" y="195" width="15" height="65" fill="#10b981"/>
+  
+  <!-- Pie Chart -->
+  <rect x="280" y="150" width="100" height="130" rx="8" fill="#1e293b"/>
+  <text x="290" y="170" fill="#f1f5f9" font-family="system-ui" font-size="12" font-weight="bold">Traffic Sources</text>
+  
+  <circle cx="330" cy="215" r="30" fill="none" stroke="#64748b" stroke-width="2"/>
+  <path d="M330 185 A30 30 0 0 1 350 225 L330 215 Z" fill="#10b981"/>
+  <path d="M350 225 A30 30 0 0 1 320 235 L330 215 Z" fill="#3b82f6"/>
+  <path d="M320 235 A30 30 0 0 1 310 195 L330 215 Z" fill="#f59e0b"/>
+  <path d="M310 195 A30 30 0 1 1 330 185 L330 215 Z" fill="#8b5cf6"/>
+  
+  <!-- Legend -->
+  <circle cx="290" cy="255" r="3" fill="#10b981"/>
+  <text x="300" y="259" fill="#64748b" font-family="system-ui" font-size="8">Organic 45%</text>
+  <circle cx="290" cy="267" r="3" fill="#3b82f6"/>
+  <text x="300" y="271" fill="#64748b" font-family="system-ui" font-size="8">Direct 30%</text>
+</svg>

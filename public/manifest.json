@@ -1,0 +1,98 @@
+{
+  "name": "Yuri Michael Montañez Tuncar - Portfolio",
+  "short_name": "Yuri Portfolio",
+  "description": "Portfolio profesional de Yuri Michael Montañez Tuncar - Senior Software Engineer especializado en desarrollo full-stack",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "technology"],
+  "lang": "es-ES",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/professional-developer-headshot.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Portfolio Desktop View"
+    },
+    {
+      "src": "/screenshot-mobile.png", 
+      "sizes": "390x844",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Portfolio Mobile View"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "shortcuts": [
+    {
+      "name": "Ver Proyectos",
+      "short_name": "Proyectos",
+      "description": "Explorar proyectos de desarrollo",
+      "url": "/projects",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Experiencia",
+      "short_name": "Experiencia", 
+      "description": "Ver experiencia profesional",
+      "url": "/experience",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Información de contacto",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/favicon.svg", 
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter, Fira_Code } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
+import { I18nProvider } from "../contexts/I18nContext"
+import { ThemeProvider } from "../contexts/ThemeContext"
+import ErrorBoundary from "../components/ErrorBoundary"
+import Footer from "../components/Footer"
+import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+})
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-fira-code",
+})
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://michcode.dev'),
+  title: "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas | Full Stack Developer",
+  description:
+    "Portfolio profesional de Yuri Michael Montañez Tuncar (michcode) - Ingeniero de Sistemas con más de 8 años de experiencia en desarrollo full-stack, Spring Framework, Angular, React, React Native y arquitecturas de microservicios.",
+  keywords: [
+    "Yuri Michael Montañez Tuncar",
+    "Yuri Montañez",
+    "michcode",
+    "Ingeniero de Sistemas",
+    "Full Stack Developer",
+    "Spring Framework",
+    "Angular",
+    "React",
+    "React Native",
+    "Node.js",
+    "Java",
+    "TypeScript",
+    "Microservicios",
+    "AWS",
+    "Docker",
+    "Portfolio",
+  ],
+  authors: [{ name: "Yuri Michael Montañez Tuncar", url: "https://michcode.dev" }],
+  creator: "Yuri Michael Montañez Tuncar",
+  publisher: "michcode",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    alternateLocale: ["en_US"],
+    url: "https://michcode.dev",
+    siteName: "michcode - Yuri Montañez Portfolio",
+    title: "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas | Full Stack Developer",
+    description:
+      "Portfolio profesional mostrando experiencia en desarrollo full-stack, Spring Framework, Angular, React, React Native y arquitecturas de microservicios.",
+    images: [
+      {
+        url: "/yuri-montanez-profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yuri Michael Montañez Tuncar - Ingeniero de Sistemas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yuri Michael Montañez Tuncar | michcode - Ingeniero de Sistemas",
+    description: "Portfolio profesional mostrando experiencia en desarrollo full-stack y tecnologías modernas.",
+    images: ["/yuri-montanez-profile.jpg"],
+    creator: "@michcode",
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  alternates: {
+    canonical: "https://michcode.dev",
+    languages: {
+      "es-ES": "https://michcode.dev/es",
+      "en-US": "https://michcode.dev/en",
+    },
+  },
+  generator: "Next.js",
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="es" className="dark">
+      <head>
+        {/* JSON-LD temporalmente removido para debug */}
+      </head>
+      <body className={`font-sans ${inter.variable} ${firaCode.variable} antialiased`}>
+        <ErrorBoundary>
+          <ThemeProvider>
+            <I18nProvider>
+              {children}
+              <Footer />
+            </I18nProvider>
+          </ThemeProvider>
+        </ErrorBoundary>
+        <Analytics />
+      </body>
+    </html>
+  )
+}
